@@ -1,0 +1,19 @@
+{% if user.is_anonymous %}
+<div class="content-block">
+    <div class="auth-buttons">
+        <a class="btn login" href="{% url 'home' %}">
+            Login
+        </a>
+        <a class="btn new-account" href="{% url 'register' %}">
+            Register
+        </a>
+    </div>
+    <div class="form-container">
+        {% if register_form %}
+        {% include 'components/register.html' %}
+        {% else %}
+        {% include 'components/login.html' %}
+        {% endif %}
+    </div>
+</div>
+{% endif %}

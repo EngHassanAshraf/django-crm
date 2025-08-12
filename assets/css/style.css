@@ -1,49 +1,58 @@
 .container{
-    padding: 70px 50px;
+    padding: 0px 50px;
 }
 
-.form{
+.form-container{
+
     background-color: var(--light-color);
     border-radius: 7px;
-    width: 700px;
-    height: 400px;
+
+    width: 500px;
+    height: max-content;
+    padding-bottom: 20px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    position: absolute;
+    top: 70px;
+
+    overflow-y: auto;
 }
 
-.form .login-head{
-    font-size: 45px;
+.form-container .form-head{
+    font-size: 40px;
     color: var(--primary-color);
-    height: 90px;
+    height: 70px;
     width: 100%;
     display: grid;
     justify-content: center;
     align-items: center;
 }
 
-.form .login-form{
+.form-container .form{
     flex: 1;
     width: 350px;
 }
 
-.form .login-form .form-control{
+.form-container .form .form-control{
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
 
-.form .login-form .form-control label{
+.form-container .form .form-control label{
     font-size: 18px;
     font-weight: 500;
     color: var(--primary-color);
 }
 
-.form .login-form .form-control input{
+.form-container .form .form-control input{
     margin: 5px 0;
 }
 
-.form .login-form .form-submit{
+.form-container .form .form-submit{
     font-weight: 700;
 }

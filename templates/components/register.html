@@ -1,0 +1,45 @@
+<div>
+    <h1 class="form-head">New Account</h1>
+    {% include 'components/alert.html' %}
+    <form class="form register-form" action="" method="POST">
+        {% csrf_token %}
+        
+        <div class="form-control">
+            <label for="id_full_name">
+                Name
+            </label>
+            <input class="form-input" id="id_full_name" type="text" name="full_name" placeholder="Full Name" autocomplete="off"
+                required>
+        </div>
+        
+        <div class="form-control">
+            <label for="id_email">
+                Email
+            </label>
+            <input class="form-input" id="id_email" type="email" name="email" placeholder="Email" autocomplete="off"
+                required>
+        </div>
+
+        <div class="form-control">
+            <label for="id_password1">
+                Password
+            </label>
+            <input class="form-input" id="id_password1" type="password" name="password1" placeholder="Password"
+                autocomplete="new-password" required>
+        </div>
+
+        <div class="form-control">
+            <label for="id_password2">
+                Confirm Password
+            </label>
+            <input class="form-input" id="id_password2" type="password" name="password2" placeholder="Confirm Password"
+                autocomplete="new-password" required>
+        </div>
+
+        <input class="btn form-submit" type="submit" value="Register">
+    </form>
+</div>
+
+<script>
+    document.title = "CRM | Register"
+</script>

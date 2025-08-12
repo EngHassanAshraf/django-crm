@@ -1,12 +1,12 @@
-body{
-    height: 3000px;
-    padding-top: 70px;
-}
-
 body, h1, h2, h3, h4, h5, h6, p{
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Roboto;
+}
+
+body{
+    height: 3000px;
+    padding-top: 70px;
 }
 
 a{
@@ -19,31 +19,36 @@ input{
     outline: none;
     border: none;
     border-radius: 2px;
+    
     color: var(--primary-color);
     font-size: 16px;
 }
 
 
 .content-block{
-    position: fixed;
+    
     z-index: 2;
-    top: 0px;
-    bottom: 0;
+    position: fixed;
+    top: 0;
     left: 0;
+    bottom: 0;
     right: 0;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    
     background-color: rgba(0, 0, 0, 0.8);
 }
 
 .auth-buttons{
     width: 200px;
+    
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    
     position: absolute;
-
     top: 15px;
     right: 1px;
 }
@@ -51,18 +56,22 @@ input{
 .btn{
     font-size: 15px;
     font-weight: 500;
+
     color: var(--light-color);
-    border: 1px solid var(--light-color);
     background-color: var(--primary-color);
+    
+    border: 1px solid var(--light-color);
     border-radius: 7px;
+    
     padding: 10px 15px;
     cursor: pointer;
 }
 
 .btn:active{
     color: var(--primary-color);
-    border: 1px solid var(--primary-color);
     background-color: var(--light-color);
+    
+    border: 1px solid var(--primary-color);
 }
 
 :root {
