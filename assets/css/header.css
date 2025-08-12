@@ -69,22 +69,6 @@
     position: relative;
 }
 
-.header .auth-area .btn{
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--light-color);
-    border: 1px solid var(--light-color);
-    border-radius: 7px;
-
-    padding: 10px 15px;
-}
-
-.header .auth-area .btn:active{
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    background-color: var(--light-color);
-}
-
 .header .auth-area .logout{
     position: absolute;
     right: 20px;
