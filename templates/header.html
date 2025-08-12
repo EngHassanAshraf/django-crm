@@ -1,0 +1,36 @@
+<header class="header">
+    <div class="nav-link">
+        <a class="link" href="{% url 'home' %}">CRM</a>
+    </div>
+
+    <ul class="nav-list">
+    {% if user.is_authenticated %}
+        <li class="list-item">
+            <a class="list-link active" href="">
+                Home
+            </a>
+        </li>
+
+        <li class="list-item">
+            <a class="list-link" href="">
+                Customers
+            </a>
+        </li>
+    {% endif %}
+    </ul>
+
+    <div class="auth-area">
+        {% if not user.is_authenticated %}
+        <a class="btn login" href="">
+            Login
+        </a>
+        <a class="btn new-account" href="">
+            New Account
+        </a>
+        {% else %}
+        <a class="btn logout" href="{% url 'logout' %}">
+            Logout
+        </a>
+        {% endif %}
+    </div>
+</header>

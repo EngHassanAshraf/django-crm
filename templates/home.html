@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}
+CRM | Home Page
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+    {% if user.is_anonymous %}
+    <div class="content-block">
+        
+        <div class="form">
+            <h1 class="login-head">Login</h1>
+            <form class="login-form" action="" method="POST">
+                {% csrf_token %}
+                <div class="form-control">
+                    <label for="id_email">Email</label>
+                    <input class="form-input" id="id_email" type="email" name="email" placeholder="Email" autocomplete="off" required>
+                    <p class="help-text">
+                        We will never share your data with any one
+                    </p>
+                </div>
+                <div class="form-control">
+                    <label for="id_password">Password</label>
+                    <input class="form-input" id="id_password" type="password" name="password" placeholder="Password" autocomplete="new-password" required aria-required="true">
+                </div>
+    
+                <input class="form-submit" type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+    {% endif %}
+    <div class="content">
+        <h1>Django CRM System</h1>
+    </div>
+</div>
+{% endblock content %}
