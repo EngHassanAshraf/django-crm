@@ -1,7 +1,61 @@
 {% if messages %}
-<div class="alert">
-    {% for message in messages %}
-    <p class="alert-message">{{ message }}</p>
+<style>
+    .alert{
+        width: 300px;
+        height: 35px;
+        border-radius: 5px;
+        padding: 0px 20px;
+
+        display: flex;
+        align-items: center;
+
+        margin: 5px 0px;
+    }
+
+    .info-alert{
+        background-color: var(--info-alert);
+    }
+
+    .success-alert{
+        background-color: var(--success-alert);
+    }
+
+    .error-alert{
+        background-color: var(--danger-alert);
+    }
+
+    .alert-message{
+        flex:1;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+
+    .close-button{
+        width: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 700;
+        color: rgba(26, 21, 21, 0.7);
+    }
+    .close-button:hover{
+        color: rgba(26, 21, 21, 0.9);
+    }
+
+
+</style>
+{% for message in messages %}
+    <div class="alert {{message.tags}}-alert">
+        <p class="alert-message">{{ message }}</p>
+        <p class="close-button">X</p>
+    </div>
     {% endfor %}
-</div>
 {% endif %}
+
+<script>
+    const closeButton = document.querySelector(".close-button");
+    let alert = document.querySelector(".alert")
+    closeButton.addEventListener("click",()=>{
+        alert.style.display = "none";
+    });
+</script>

@@ -7,6 +7,7 @@
     right: 0;
     top: 0;
     height: 70px;
+    z-index: 1;
 
     display: flex;
     align-items: center;
@@ -61,15 +62,11 @@
     padding-bottom: 5px;
 }
 
-.header .auth-area{
-    width: 250px;
+.header .logout-button{
+    width: 150px;
+    height: 100%;
+
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    position: relative;
-}
-
-.header .auth-area .logout{
-    position: absolute;
-    right: 20px;
+    justify-content: center;
 }

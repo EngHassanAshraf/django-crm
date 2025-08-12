@@ -5,7 +5,11 @@ CRM | Home Page
 {% endblock title %}
 
 {% block content %}
+
 <div class="container">
+    {% if user.is_authenticated %}
+    {% include 'components/alert.html' %}
+    {% endif %}
     <div class="content">
         <h1>Django CRM System</h1>
     </div>

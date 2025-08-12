@@ -16,8 +16,17 @@
     {% include "header.html" %}
     {% if user.is_anonymous %}
     <div class="content-block">
+        <div class="auth-buttons">
+            <a class="btn login" href="">
+                Login
+            </a>
+            <a class="btn new-account" href="">
+                New Account
+            </a>
+        </div>
         <div class="form">
             <h1 class="login-head">Login</h1>
+            {% include 'components/alert.html' %}
             <form class="login-form" action="" method="POST">
                 {% csrf_token %}
                 <div class="form-control">

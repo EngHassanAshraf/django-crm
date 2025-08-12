@@ -10,7 +10,7 @@ def home(request):
         user = authenticate(request, username=email, password=password)
         if user:
             login(request, user)
-            messages.success(request, "LoggedIn Successfully")
+            messages.success(request, "Logged In")
         else:
             messages.error(request, "Login Failed")
 
@@ -24,5 +24,5 @@ def ulogin(request):
 def ulogout(request):
     if request.user.is_authenticated:
         logout(request)
-        messages.info(request, "Logout")
+        messages.info(request, "Logged Out")
     return redirect("home")
