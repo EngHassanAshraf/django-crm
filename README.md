@@ -2,4 +2,4 @@
 
 ## Description
 
-Using Django, PostgreSQL, and JS to make a helpfull Customer Relation Management
+Using Django, PostgreSQL, and JS to make a helpfull Customer Relationship Management
