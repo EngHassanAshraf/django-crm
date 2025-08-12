@@ -25,5 +25,4 @@ def ulogout(request):
     if request.user.is_authenticated:
         logout(request)
         messages.info(request, "Logout")
-        return render(request, "auth/logout.html")
     return redirect("home")
