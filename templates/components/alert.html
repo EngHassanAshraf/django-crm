@@ -1,9 +1,9 @@
 {% if messages %}
 <style>
     .alert{
-        width: 300px;
-        height: 35px;
-        border-radius: 5px;
+        width: 350px;
+        height: 45px;
+        border-radius: 6px;
         padding: 0px 20px;
 
         display: flex;
@@ -14,21 +14,26 @@
 
     .info-alert{
         background-color: var(--info-alert);
+        border: 2px solid var(--info-alert-brdr);
+        color: rgb(5, 81, 96);
     }
 
     .success-alert{
         background-color: var(--success-alert);
+        border: 2px solid var(--success-alert-brdr);
+        color: rgb(10, 54, 34);
     }
 
     .error-alert{
         background-color: var(--danger-alert);
+        border: 2px solid var(--danger-alert-brdr);
+        color: rgb(88, 21, 28);
     }
 
     .alert-message{
         flex:1;
         font-size: 20px;
         font-weight: 600;
-        color: var(--primary-color);
     }
 
     .close-button{
@@ -41,7 +46,6 @@
     .close-button:hover{
         color: rgba(26, 21, 21, 0.9);
     }
-
 
 </style>
 {% for message in messages %}

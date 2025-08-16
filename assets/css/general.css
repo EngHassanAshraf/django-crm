@@ -78,7 +78,13 @@ input{
     --primary-color:rgb(35, 45, 55);
     --secondary-color:rgb(177, 177, 177);
     --light-color: rgb(212, 212, 212);
-    --danger-alert: rgba(255, 0, 43, 0.9);
-    --info-alert: rgb(233, 217, 0);
-    --success-alert: rgb(0, 196, 33);
+
+    --danger-alert: rgb(248, 215, 218);
+    --danger-alert-brdr: rgb(241, 174, 181);
+    --info-alert: rgb(207, 244, 252);
+    --info-alert-brdr: rgb(158, 234, 249);
+    --warning-alert-brdr: rgb(255, 230, 156);
+    --warning-alert-brdr: rgb(255, 230, 156);
+    --success-alert: rgb(209, 231, 221);
+    --success-alert-brdr: rgb(163, 207, 187);
 }
