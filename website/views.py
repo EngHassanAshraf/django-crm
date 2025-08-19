@@ -25,7 +25,7 @@ def home(request):
         return redirect("home")
 
     if request.method == "POST":
-        if "regsiter" in request.path:
+        if "register" in request.path:
             register_logic(request)
             return redirect("home")
         else:

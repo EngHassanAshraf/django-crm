@@ -3,15 +3,25 @@
     {% include 'components/alert.html' %}
     <form class="form register-form" action="" method="POST">
         {% csrf_token %}
-        
-        <div class="form-control">
-            <label for="id_full_name">
-                Name
-            </label>
-            <input class="form-input" id="id_full_name" type="text" name="full_name" placeholder="Full Name" autocomplete="off"
-                required>
+
+        <div class="names">
+
+            <div class="form-control first_name">
+                <label for="id_first_name">
+                    First Name
+                </label>
+                <input class="form-input" id="id_first_name" type="text" name="first_name" placeholder="First Name"
+                    autocomplete="off" required>
+            </div>
+            <div class="form-control last_name">
+                <label for="id_last_name">
+                    Last Name
+                </label>
+                <input class="form-input" id="id_last_name" type="text" name="last_name" placeholder="Last Name"
+                    autocomplete="off" required>
+            </div>
         </div>
-        
+
         <div class="form-control">
             <label for="id_email">
                 Email
