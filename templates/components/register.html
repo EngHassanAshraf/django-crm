@@ -10,15 +10,13 @@
                 <label for="id_first_name">
                     First Name
                 </label>
-                <input class="form-input" id="id_first_name" type="text" name="first_name" placeholder="First Name"
-                    autocomplete="off" required>
+                {{ register_form.first_name }}
             </div>
             <div class="form-control last_name">
                 <label for="id_last_name">
                     Last Name
                 </label>
-                <input class="form-input" id="id_last_name" type="text" name="last_name" placeholder="Last Name"
-                    autocomplete="off" required>
+                {{ register_form.last_name }}
             </div>
         </div>
 
@@ -26,24 +24,23 @@
             <label for="id_email">
                 Email
             </label>
-            <input class="form-input" id="id_email" type="email" name="email" placeholder="Email" autocomplete="off"
-                required>
+            {{ register_form.email }}
         </div>
 
         <div class="form-control">
             <label for="id_password1">
                 Password
             </label>
-            <input class="form-input" id="id_password1" type="password" name="password1" placeholder="Password"
-                autocomplete="new-password" required>
+            {{ register_form.password1 }}
+            <!-- {{ register_form.password1.help_text }} -->
         </div>
 
         <div class="form-control">
             <label for="id_password2">
                 Confirm Password
             </label>
-            <input class="form-input" id="id_password2" type="password" name="password2" placeholder="Confirm Password"
-                autocomplete="new-password" required>
+            {{ register_form.password2 }}
+            <!-- {{ register_form.password2.help_text }} -->
         </div>
 
         <input class="btn form-submit" type="submit" value="Register">

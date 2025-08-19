@@ -2,9 +2,26 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
+from .forms import RegisterForm
+
 
 def register_logic(request):
-    pass
+    user_data = RegisterForm(request.POST)
+    if user_data.is_valid():
+        try:
+            user = user_data.save()
+            login(request, user)
+            messages.success(
+                request, f"Welcome, {user_data.cleaned_data["first_name"]}"
+            )
+        except Exception as e:
+            print("ex")
+            messages.warning(request, f"{e}")
+            return redirect("register/")
+    else:
+        print("err")
+        messages.warning(request, f"{user_data.errors}")
+        return redirect("register/")
 
 
 def login_logic(request):
@@ -27,12 +44,11 @@ def home(request):
     if request.method == "POST":
         if "register" in request.path:
             register_logic(request)
-            return redirect("home")
         else:
             login_logic(request)
 
     if "register" in request.path:
-        return render(request, "home.html", {"register_form": "form"})
+        return render(request, "home.html", {"register_form": RegisterForm()})
     else:
         return render(request, "home.html")
 
