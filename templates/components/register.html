@@ -1,8 +1,17 @@
 <div>
     <h1 class="form-head">New Account</h1>
     {% include 'components/alert.html' %}
+
+    {{register_form.errors}}
+
     <form class="form register-form" action="" method="POST">
         {% csrf_token %}
+        {% for field in register_form %}
+            <p>Err1: {{field.errors}}</p>
+            {% if field.errors %}
+            <p>Err2: {{field.errors}}</p>
+            {% endif %}
+        {% endfor %}
 
         <div class="names">
 
@@ -32,7 +41,6 @@
                 Password
             </label>
             {{ register_form.password1 }}
-            <!-- {{ register_form.password1.help_text }} -->
         </div>
 
         <div class="form-control">
@@ -40,7 +48,6 @@
                 Confirm Password
             </label>
             {{ register_form.password2 }}
-            <!-- {{ register_form.password2.help_text }} -->
         </div>
 
         <input class="btn form-submit" type="submit" value="Register">

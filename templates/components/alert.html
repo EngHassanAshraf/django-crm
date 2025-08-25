@@ -2,13 +2,13 @@
 <style>
     .alert{
         width: 350px;
-        height: 45px;
+        height: fit-content;
         border-radius: 6px;
         padding: 0px 20px;
 
         display: flex;
-        align-items: center;
-
+        /* align-items: center; */
+        justify-content: space-between;
         margin: 5px 0px;
     }
 
@@ -50,7 +50,9 @@
 </style>
 {% for message in messages %}
     <div class="alert {{message.tags}}-alert">
-        <p class="alert-message">{{ message }}</p>
+        <p class="alert-message">
+            {{ message }}
+        </p>
         <p class="close-button">X</p>
     </div>
     {% endfor %}

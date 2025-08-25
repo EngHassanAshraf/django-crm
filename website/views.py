@@ -16,12 +16,10 @@ def register_logic(request):
             )
         except Exception as e:
             print("ex")
-            messages.warning(request, f"{e}")
+            messages.error(request, f"{e}")
             return redirect("register/")
-    else:
-        print("err")
-        messages.warning(request, f"{user_data.errors}")
-        return redirect("register/")
+
+    return redirect("register/")
 
 
 def login_logic(request):
