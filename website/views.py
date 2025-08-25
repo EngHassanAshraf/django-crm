@@ -14,6 +14,7 @@ def register_logic(request):
             messages.success(
                 request, f"Welcome, {user_data.cleaned_data["first_name"]}"
             )
+            return redirect("home")
         except Exception as e:
             print("ex")
             messages.error(request, f"{e}")
@@ -49,20 +50,6 @@ def home(request):
         return render(request, "home.html", {"register_form": RegisterForm()})
     else:
         return render(request, "home.html")
-
-
-def register(request):
-    if request.user.is_authenticated:
-        return redirect("home")
-
-    if request.method == "POST":
-        pass
-
-    return render(request, "auth/register.html", {})
-
-
-def ulogin(request):
-    pass
 
 
 def ulogout(request):

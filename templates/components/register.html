@@ -6,15 +6,8 @@
 
     <form class="form register-form" action="" method="POST">
         {% csrf_token %}
-        {% for field in register_form %}
-            <p>Err1: {{field.errors}}</p>
-            {% if field.errors %}
-            <p>Err2: {{field.errors}}</p>
-            {% endif %}
-        {% endfor %}
 
         <div class="names">
-
             <div class="form-control first_name">
                 <label for="id_first_name">
                     First Name

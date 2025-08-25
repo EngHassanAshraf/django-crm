@@ -7,3 +7,12 @@
 //         }
 //     });
 // });
+
+
+const closeButton = document.querySelector(".close-button");
+let alertArea = document.querySelector(".alert")
+if (closeButton && alertArea) {
+    closeButton.addEventListener("click", () => {
+        alertArea.style.display = "none";
+    });
+}
